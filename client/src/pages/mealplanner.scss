@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyfAZJhiI2B.woff2) format('woff2');
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+.planner {
+    display: flex;
+    font-family: "inter",Arial, Helvetica, sans-serif;
+}
+.column1{
+    position: fixed;
+    width: 20%;
+    padding: 10rem 1rem;
+    color: white;
+    height: 100vh;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 1000px rgba(50, 50, 50, 0.6);
+}
+.column1 h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.column1 p{
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+.column2{
+    width: 40%;
+    height: 100vh;
+    margin-top: 2rem;
+    margin-left: 22%;
+    padding-right: 2rem;
+}
+.column2 h2 {
+    font-size: 1.3rem;
+    font-weight:600;
+    padding-bottom: 1rem;
+    border-bottom: solid 1.5px darkslategray;
+    color:darkslategrey;
+    line-height: 2rem;
+}
+.column3{
+    width: 40%;
+    background-color: #E6FFE3;
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+.column3 h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    color: darkslategrey;
+    line-height: 2rem;
+}
+.meal_title {
+    margin: 1rem 0;
+    background-color: darkslategray;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    width: fit-content;
+    padding: 0.3rem 1rem;
+}
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+.item {
+    width: 30%;
+    padding: 0.2rem 0;
+    background-color:darkseagreen;
+    color: white;
+    border:none;
+    &:hover {
+        background-color: darkorange;
+        transition: all 0.5s;
+    }
+}
+.input {
+    width: 95%;
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.8rem;
+}
+.generate_btn {
+    background-color: darkslategray;
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border: none;
+    border-radius: 0.1rem;
+    font-weight: 600;
+    &:hover {
+        background-color: darkorange;
+        transition: all 0.5s;
+    }
+}
+.loading_p {
+    margin-top: 2rem;
+    font-weight: 600;
+    color: darkslategray;
+}

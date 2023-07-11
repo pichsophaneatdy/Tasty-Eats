@@ -1,0 +1,357 @@
+@use "../styles/colours" as *;
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyfAZJhiI2B.woff2)
+    format("woff2");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: $Grey;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav {
+  width: 35%;
+  height: 100%;
+  margin-right: 0.2rem;
+  text-align: center;
+
+  &__heading {
+    color: $Bright;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  &__form {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.form__search {
+  width: calc(100% - 1rem);
+  color: $Effects;
+  background-color: $Light;
+  height: 2.5rem;
+  padding: 1rem;
+  resize: none;
+  border: 1px solid $Bright;
+  border-radius: 4px;
+}
+
+.input__style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.cuisine__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: .5rem 0  .5rem 0;
+}
+
+.input__cuisine {
+  width: 23%;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: 0;
+  text-transform: uppercase;
+  color: $Light;
+  background-color: $Bright;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  transition: all 0.25s ease-in-out;
+}
+
+.input__cuisine:hover {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+.ingredient__buttons {
+  height: 75vh;
+  gap: 0.25rem;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #fff;
+  border: 0;
+  background-color: $Grey;
+  padding-top: 0.5rem;
+}
+
+.ingredient {
+  text-transform: uppercase;
+  width: 30%;
+  height: auto;
+  border-radius: 1rem;
+  background-color: #fff;
+  border: 0;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  margin: 0.2rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.ingredient:hover {
+  box-shadow: 0 3px 10px rgb(255 0 0 / 20%);
+  -webkit-filter: grayscale(40%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(40%); /* FF 35+ */
+}
+
+.potato {
+  background-image: url(../images/potato.png);
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-position: 50% 50%;
+}
+
+.rice {
+  background-image: url(../images/rice.png);
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-position: 50% 50%;
+}
+
+.soy {
+  background-image: url(../images/soy-sauce.png);
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-position: 50% 50%;
+}
+
+.ice-cream {
+  background-image: url(../images/ice-cream.png);
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-position: 50% 50%;
+}
+
+.carrots {
+  background-image: url(../images/carrot.png);
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-position: 50% 50%;
+}
+
+.garlic {
+  background-image: url(../images/garlic.png);
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-position: 50% 50%;
+}
+
+.onion {
+  background-image: url(../images/onion.png);
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-position: 50% 50%;
+}
+
+.eggs {
+  background-image: url(../images/eggs.png);
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-position: 50% 50%;
+}
+
+.tomato {
+  background-image: url(../images/tomato.png);
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-position: 50% 50%;
+}
+
+.chicken {
+  background-image: url(../images/chicken.png);
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-position: 50% 50%;
+}
+
+.fish {
+  background-image: url(../images/fish.png);
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-position: 50% 50%;
+}
+
+.shrimp {
+  background-image: url(../images/shrimp.png);
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-position: 50% 50%;
+}
+
+.potato:hover,
+.rice:hover,
+.soy:hover,
+.ice-cream:hover,
+.carrots:hover,
+.garlic:hover,
+.onion:hover,
+.eggs:hover,
+.tomato:hover,
+.chicken:hover,
+.fish:hover,
+.shrimp:hover {
+  background-size: 6rem;
+}
+
+.potato:hover:nth-child(odd),
+.soy:hover:nth-child(odd),
+.carrots:hover:nth-child(odd),
+.onion:hover:nth-child(odd),
+.tomato:hover:nth-child(odd),
+.fish:hover:nth-child(odd) {
+  transform: rotate(-2.5deg);
+}
+
+.rice:hover:nth-child(even),
+.ice-cream:hover:nth-child(even),
+.garlic:hover:nth-child(even),
+.eggs:hover:nth-child(even),
+.chicken:hover:nth-child(even),
+.shrimp:hover:nth-child(even) {
+  transform: rotate(2.5deg);
+}
+
+// Recipe page
+
+.cooking {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 65%;
+}
+
+.cooking {
+  padding: 1rem;
+  &__heading {
+    text-align: center;
+    padding: 2rem;
+    text-align: left;
+    color: $Bright;
+  }
+}
+
+.content__cards {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.ingredients,
+.recipe {
+  width: 50%;
+  height: 87vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  background-color: #fff;
+}
+
+.meal__plan {
+  width: 97%;
+  border-radius: 0.5rem;
+  border: 0;
+  padding: 0.6rem 0;
+  text-transform: uppercase;
+  color: $Light;
+  background-color: $Bright;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    background-color: darkolivegreen;
+    transition: all 0.4s;
+  }
+}
+
+.recipe {
+  flex-direction: column;
+
+  &__header {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5rem;
+    color: $Light;
+    background-color: $Bright;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+  }
+}
+
+.recipeName {
+  padding-left: 1rem;
+}
+
+.recipelist {
+  height: 1.5rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &__item {
+    padding: 0.25rem;
+    background-color: $Light;
+    border-radius: 0.25rem;
+    width: 100%;
+    padding-left: 1rem;
+  }
+}
+
+.ingredientslist {
+  height: 1.5rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &__item {
+    padding: 0.25rem;
+    background-color: $Light;
+    border-radius: 0.25rem;
+    width: 100%;
+    padding-left: 1rem;
+  }
+}
+
+.ingredients {
+  &__header {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.5rem;
+    color: $Light;
+    background-color: $Bright;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+}
